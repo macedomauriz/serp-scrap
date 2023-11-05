@@ -1,0 +1,4 @@
+{
+  "include": ["serp-scrap"],
+  "venv": "serp-scrap"
+}
