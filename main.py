@@ -40,8 +40,10 @@ def track(query, site, geo):
         # WARNING: Google DOM changes might break this
         if link.h3 is not None:
             a = link.get("href")
-            domain = urlparse("http" + a.split("http")[1]).netloc
-            total_serp.append(domain)
+
+            if "http" in a:
+                domain = urlparse("http" + a.split("http")[1]).netloc
+                total_serp.append(domain)
 
     for index, result in enumerate(total_serp):
         if result.find(site) != -1:
@@ -77,6 +79,7 @@ while True:
         geography, ncols=80, bar_format="{l_bar}{bar}", ascii="︲▇", desc="Searching: "
     ):
         for synonym in synonyms:
+            # print(f"track args: {synonym} {geo}, {site}, {geo}")
             tracked = track(f"{synonym} {geo}", site, geo)
 
             raw_domains_results.append(tracked[0])
