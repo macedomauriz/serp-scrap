@@ -11,4 +11,4 @@ PREFERRED_DOMAIN=string
 GEOGRAPHY=string,string,string
 
 **Add keywords**
-SYNONIMS=string,string,string
+SYNONYMS=string,string,string
