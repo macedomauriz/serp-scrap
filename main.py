@@ -9,7 +9,7 @@ import os
 
 preferred_domain = os.environ.get("PREFERRED_DOMAIN")
 geography = os.environ.get("GEOGRAPHY").split(",")
-synonyms = os.environ.get("SYNONIMS").split(",")
+synonyms = os.environ.get("SYNONYMS").split(",")
 
 
 def track(query, site, geo):
